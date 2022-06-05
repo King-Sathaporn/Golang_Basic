@@ -72,7 +72,7 @@ type todo2 struct {
 }
 
 func constantDatabase() *gorm.DB {
-	dsn := "host=localhost user=postgres password=0809630288@King dbname=GolangDB port=5432 sslmode=disable TimeZone=Asia/Bangkok"
+	dsn := "host=localhost user=postgres password=yourPassword dbname=GolangDB port=yourPort sslmode=disable TimeZone=Asia/Bangkok"
 	database, _ := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
 	database.AutoMigrate(&todo{})
